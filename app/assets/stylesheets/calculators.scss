@@ -25,7 +25,7 @@ position: relative;
 border-style: solid;
 border-width: medium;
 border-color: black;
-height: 72px;
+height: 75px;
 width: 75px;
 margin: auto;
 font-weight: bold;
@@ -34,6 +34,7 @@ border-radius: 12px;
 transition-duration: 0.4s;
 float: left; 
 outline: none;
+cursor : pointer;
 }
 
 
@@ -41,9 +42,10 @@ outline: none;
 .button:hover
 {
 	 color: white;
+	 
 }
 
-#text
+#screen
 {
 height: 35px;
 border-color:black;

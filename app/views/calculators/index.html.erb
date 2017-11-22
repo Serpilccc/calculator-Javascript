@@ -2,7 +2,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculator</title>
-	<rel link="stylesheet" type="text/css" href="calculatrices.scss"
+	<rel link="stylesheet" type="text/css" href="calculators.scss"
+	
 </head>
 
 
@@ -13,59 +14,94 @@
 
 
 
-<div id="content"
-
+<div id="content">
 <form>
 
-<div>
-<input id="text" type="text"  size="48"/>
-</div>
-
-<div id="b">
-<div>
-<input type="button" value="AC"  class="button" onclick="check(AC)"/>
-<input type="button" value="+/-" class="button" onclick="check(+/-)"/>
-<input type="button" value="%"   class="button" onclick="check(%)"/>
-<input type="button" value="÷"   class="button" onclick="check(÷)"/>
-</div>
 
 
-<div>
-<input type="button" value="7" class="button" onclick="check(7)"/>
-<input type="button" value="8" class="button" onclick="check(8)"/>
-<input type="button" value="9" class="button" onclick="check(9)"/>
-<input type="button" value="x" class="button" onclick="check(x)"/>
-</div>
-	
-<div>
-<input type="button" value="4" class="button" onclick="check(4)"/>
-<input type="button" value="5" class="button" onclick="check(5)"/>
-<input type="button" value="6" class="button" onclick="check(6)"/>
-<input type="button" value="-" class="button" onclick="check(-)"/>
-</div>
+<input id="but" name="scren" type="text"  size="48"/>
+
+
+<input type="button" value="AC"  class="button" onclick="screen(AC)"/>
+<input type="button" value="+/-" class="button" onclick="screen(+/-)"/>
+<input type="button" value="%"   class="button" onclick="screen(%)"/>
+<input type="button" value="÷"   class="button" onclick="screen(÷)"/>
+
+
+
+<input type="button" value="7" class="button" onclick="screen(7)"/>
+<input type="button" value="8" class="button" onclick="screen(8)"/>
+<input type="button" value="9" class="button" onclick="screen(9)"/>
+<input type="button" value="x" class="button" onclick="multiply(x)"/>
+
 	
 
-<div>
-<input type="button" value="1" class="button" onclick="check(1)"/>
-<input type="button" value="2" class="button" onclick="check(2)"/>
-<input type="button" value="3" class="button" onclick="check(3)"/>
-<input type="button" value="+" class="button" onclick="check(+)"/>
-</div>
+<input type="button" value="4" class="button" onclick="screen(4)"/>
+<input type="button" value="5" class="button" onclick="screen(5)"/>
+<input type="button" value="6" class="button" onclick="screen(6)"/>
+<input type="button" value="-" class="button" onclick="substract(-)"/>
+
 	
 
-<div>
-<input type="button" value="0" class="button" onclick="check(0)"/>
-<input type="button" value="C" class="button" onclick="check(C)"/>
-<input type="button" value="." class="button" onclick="check(.)"/>
-<input type="button" value="=" class="button" onclick="check(=)"/>
-</div>
-</div>
+
+<input type="button" value="1" class="button" onclick="screen(1)"/>
+<input type="button" value="2" class="button" onclick="screen(2)"/>
+<input type="button" value="3" class="button" onclick="screen(3)"/>
+<input type="button" value="+" class="button" onclick="screen(+)"/>
+
+	
+
+
+<input type="button" value="0" class="button" onclick="screen(0)"/>
+<input type="button" value="C" class="button" onclick="screen(C)"/>
+<input type="button" value="." class="button" onclick="screen(.)"/>
+<input type="button" value="=" class="button" onclick="answer(=)"/>
+
 
 </form>
 
 </div>
 
-<script src="calculator.js"></script>
+<script>
+
+   
+    var code = document.getElementById('but')
+
+
+function screen(x)
+
+{
+	code.value+=x;
+
+	if (x=='C')
+	{
+		code.value='';
+	}
+}
+
+
+
+function answer()
+{
+
+	x=code.value;
+	x=eval(x);
+	code.value= x;
+
+}
+
+
+function power(y)
+
+{
+	x=code.value;
+	x=Math.pow(x,y);
+	code.value=x;
+}
+
+</script>
+
+
 
 </body>
 </html>
