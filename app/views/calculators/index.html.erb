@@ -23,7 +23,7 @@
 
 
 <input type="button" value="AC"  class="button" onclick="screen(AC)"/>
-<input type="button" value="+/-" class="button" onclick="screen(+/-)"/>
+<input type="button" value="P" class="button" onclick="power(P)"/>
 <input type="button" value="%"   class="button" onclick="screen(%)"/>
 <input type="button" value="÷"   class="button" onclick="screen(÷)"/>
 
@@ -64,40 +64,6 @@
 
 <script>
 
-   
-    var code = document.getElementById('but')
-
-
-function screen(x)
-
-{
-	code.value+=x;
-
-	if (x=='C')
-	{
-		code.value='';
-	}
-}
-
-
-
-function answer()
-{
-
-	x=code.value;
-	x=eval(x);
-	code.value= x;
-
-}
-
-
-function power(y)
-
-{
-	x=code.value;
-	x=Math.pow(x,y);
-	code.value=x;
-}
 
 </script>
 
